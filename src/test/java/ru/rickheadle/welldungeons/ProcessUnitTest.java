@@ -1,41 +1,39 @@
 package ru.rickheadle.welldungeons;
 
-import static org.camunda.bpm.engine.test.assertions.ProcessEngineTests.assertThat;
-import static org.camunda.bpm.engine.test.assertions.ProcessEngineTests.processEngine;
+import static org.camunda.bpm.engine.test.assertions.bpmn.AbstractAssertions.init;
+import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.assertThat;
 
 import java.sql.SQLException;
 import org.apache.ibatis.logging.LogFactory;
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.engine.test.Deployment;
-import org.camunda.bpm.extension.junit5.test.ProcessEngineExtension;
+import org.camunda.bpm.extension.process_test_coverage.junit5.ProcessEngineCoverageExtension;
+import org.camunda.community.mockito.DelegateExpressions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.api.extension.RegisterExtension;
 
 /**
  * Test case starting an in-memory database-backed Process Engine.
  */
-@ExtendWith(ProcessEngineExtension.class)
+@ExtendWith(ProcessEngineCoverageExtension.class)
+@Deployment(resources = "process.bpmn")
 public class ProcessUnitTest {
 
-/*  @ClassRule
-  @Rule
-  public static ProcessEngineRule rule = TestCoverageProcessEngineRuleBuilder.create().build();*/
-
   private static final String PROCESS_DEFINITION_KEY = "CamundaTestsDemo";
-  public ProcessEngine processEngine;
+  public static ProcessEngine processEngine;
 
   static {
     LogFactory.useSlf4jLogging(); // MyBatis
+    DelegateExpressions.autoMock("process.bpmn");
   }
 
 
-/*  @BeforeAll
+  @BeforeAll
   public static void setup() {
-    ProcessEngineRule rule = TestCoverageProcessEngineRuleBuilder.create().build();
     init(processEngine);
-  }*/
+  }
 
   /**
    * Just tests if the process definition is deployable.
@@ -58,7 +56,7 @@ public class ProcessUnitTest {
     // To inspect the DB, run the following line in the debugger
     // then connect your browser to: http://localhost:8082
     // and enter the JDBC URL: jdbc:h2:mem:camunda
-    org.h2.tools.Server.createWebServer("-web").start();
+//    org.h2.tools.Server.createWebServer("-web").start();
 
   }
 

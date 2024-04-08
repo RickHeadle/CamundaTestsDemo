@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="Definitions_173q4p1" name="chooseDrink" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.21.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.20.0">
+  <decision id="Decision_1n1kdzk" name="chooseDrink" camunda:historyTimeToLive="P1D">
+    <informationRequirement id="InformationRequirement_0iqmcpk">
+      <requiredInput href="#InputData_0bk7aa1" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0nm58qc">
+      <requiredInput href="#InputData_02txcdm" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0xcw1om" hitPolicy="FIRST">
+      <input id="Input_1" label="Состояние" camunda:inputVariable="programmer_condition">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1dqqh61" label="Сроки по задаче" camunda:inputVariable="is_deadline_soon">
+        <inputExpression id="LiteralExpression_16sqlc3" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Решение" name="drink_selection" typeRef="string" />
+      <rule id="DecisionRule_14wnsc8">
+        <inputEntry id="UnaryTests_1lvz906">
+          <text>"Бодрое"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r78078">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18s1gm9">
+          <text>"Чёрный чай"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0yieuxu">
+        <inputEntry id="UnaryTests_0c33t0o">
+          <text>"Сонное"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13u422x">
+          <text>"Скоро дедлайн"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hflqtf">
+          <text>"Зелёный чай"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1md5wqz">
+        <inputEntry id="UnaryTests_1ele0ps">
+          <text>"Сонное"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11ypxa3">
+          <text>"Дедлайн был вчера"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_011f1g6">
+          <text>"Кофе"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1o6zt8u">
+        <inputEntry id="UnaryTests_0j25b8o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g9kt9i">
+          <text>"Дедлайн не скоро"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1trcvov">
+          <text>"Какао"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rht7r1">
+        <inputEntry id="UnaryTests_11detxt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ay6s7x">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0afi03k">
+          <text>"Напиток не выбран"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_0bk7aa1" name="programmer_condition" />
+  <inputData id="InputData_02txcdm" name="is_deadline_soon" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1n1kdzk">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1oido33" dmnElementRef="InputData_0bk7aa1">
+        <dc:Bounds height="45" width="125" x="157" y="337" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0ezrb2b" dmnElementRef="InformationRequirement_0iqmcpk">
+        <di:waypoint x="220" y="337" />
+        <di:waypoint x="220" y="200" />
+        <di:waypoint x="220" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_160jckg" dmnElementRef="InputData_02txcdm">
+        <dc:Bounds height="45" width="125" x="297" y="337" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_02x8fpo" dmnElementRef="InformationRequirement_0nm58qc">
+        <di:waypoint x="360" y="337" />
+        <di:waypoint x="280" y="200" />
+        <di:waypoint x="280" y="180" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec124809-7aef-45ae-ac81-3f85b8be20ae" name="Changes" comment="Init. Fails on buildup - problem with camunda.cfg.xml">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/SimpleProcessTest.java" afterDir="false" />
+    <list default="true" id="ec124809-7aef-45ae-ac81-3f85b8be20ae" name="Changes" comment="Fixed my dependencies' problem. Tests are now working.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rickheadle/welldungeons/TestServiceTaskDelegate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/bpmn/process2_twoServices.bpmn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/bpmn/process3_formsAndExceptions.bpmn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/bpmn/process4_asyncServices.bpmn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/bpmn/process5_withDMN.bpmn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dmn/process5_chooseDrink.dmn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/AsyncServicesProcessTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/FormsAndExceptionsProcessTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/TwoServicesProcessTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/WithDmnProcessTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/process.bpmn" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/process.bpmn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/ProcessUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/ProcessUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/camunda.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/camunda.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/process.bpmn" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bpmn/process1_basic.bpmn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/ProcessUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/ProcessExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/SimpleProcessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/BasicProcessTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,18 +45,36 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2eKb2ijogId28Gi2gG9KI0NTeH4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JUnit.AsyncServicesProcessTest.executor": "Run",
+    "JUnit.AsyncServicesProcessTest.processStart_thenCompletedSuccessfully.executor": "Run",
+    "JUnit.BasicProcessTest.executor": "Run",
+    "JUnit.FormsAndExceptionsProcessTest.executor": "Run",
+    "JUnit.FormsAndExceptionsProcessTest.testErrorPath.executor": "Run",
+    "JUnit.FormsAndExceptionsProcessTest.testFailurePath.executor": "Run",
+    "JUnit.FormsAndExceptionsProcessTest.testHappyPath.executor": "Run",
+    "JUnit.ProcessExampleUnitTest.executor": "Run",
     "JUnit.ProcessUnitTest.executor": "Run",
     "JUnit.ProcessUnitTest.testHappyPath.executor": "Run",
     "JUnit.ProcessUnitTest.testParsingAndDeployment.executor": "Run",
     "JUnit.SimpleProcessTest.executor": "Run",
     "JUnit.SimpleProcessTest.processStart_thenCompletedSuccessfully.executor": "Run",
+    "JUnit.TwoServicesProcessTest.executor": "Debug",
+    "JUnit.TwoServicesProcessTest.testHappyPath.executor": "Run",
+    "JUnit.WithDmnProcessTest.executor": "Run",
+    "JUnit.WithDmnProcessTest.processStart_thenCompletedSuccessfully (1).executor": "Run",
+    "JUnit.WithDmnProcessTest.processStart_thenCompletedSuccessfully (2).executor": "Run",
+    "JUnit.WithDmnProcessTest.processStart_thenCompletedUnsuccessfully.executor": "Run",
+    "JUnit.WithDmnProcessTest.start_chooseDrink.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.CamundaTestsDemo [clean,install].executor": "Run",
     "Maven.CamundaTestsDemo [clean].executor": "Run",
@@ -58,17 +87,23 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\IdeaProjects\CamundaTestsDemo\src\main\resources\bpmn" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleProcessTest">
-    <configuration name="ProcessUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.welldungeons in CamundaTestsDemo">
+    <configuration name="AsyncServicesProcessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CamundaTestsDemo" />
       <extension name="coverage">
         <pattern>
@@ -77,13 +112,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.rickheadle.welldungeons" />
-      <option name="MAIN_CLASS_NAME" value="ru.rickheadle.welldungeons.ProcessUnitTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.rickheadle.welldungeons.AsyncServicesProcessTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProcessUnitTest.testHappyPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BasicProcessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CamundaTestsDemo" />
       <extension name="coverage">
         <pattern>
@@ -92,45 +127,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.rickheadle.welldungeons" />
-      <option name="MAIN_CLASS_NAME" value="ru.rickheadle.welldungeons.ProcessUnitTest" />
-      <option name="METHOD_NAME" value="testHappyPath" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProcessUnitTest.testParsingAndDeployment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CamundaTestsDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.rickheadle.welldungeons.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.rickheadle.welldungeons" />
-      <option name="MAIN_CLASS_NAME" value="ru.rickheadle.welldungeons.ProcessUnitTest" />
-      <option name="METHOD_NAME" value="testParsingAndDeployment" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleProcessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CamundaTestsDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.rickheadle.welldungeons.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.rickheadle.welldungeons" />
-      <option name="MAIN_CLASS_NAME" value="ru.rickheadle.welldungeons.SimpleProcessTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.rickheadle.welldungeons.BasicProcessTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleProcessTest.processStart_thenCompletedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FormsAndExceptionsProcessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CamundaTestsDemo" />
       <extension name="coverage">
         <pattern>
@@ -139,20 +142,42 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.rickheadle.welldungeons" />
-      <option name="MAIN_CLASS_NAME" value="ru.rickheadle.welldungeons.SimpleProcessTest" />
-      <option name="METHOD_NAME" value="processStart_thenCompletedSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ru.rickheadle.welldungeons.FormsAndExceptionsProcessTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwoServicesProcessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CamundaTestsDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.rickheadle.welldungeons.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.rickheadle.welldungeons" />
+      <option name="MAIN_CLASS_NAME" value="ru.rickheadle.welldungeons.TwoServicesProcessTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="welldungeons in CamundaTestsDemo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CamundaTestsDemo" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SimpleProcessTest" />
-        <item itemvalue="JUnit.ProcessUnitTest" />
-        <item itemvalue="JUnit.ProcessUnitTest.testHappyPath" />
-        <item itemvalue="JUnit.SimpleProcessTest.processStart_thenCompletedSuccessfully" />
-        <item itemvalue="JUnit.ProcessUnitTest.testParsingAndDeployment" />
+        <item itemvalue="JUnit.welldungeons in CamundaTestsDemo" />
+        <item itemvalue="JUnit.TwoServicesProcessTest" />
+        <item itemvalue="JUnit.BasicProcessTest" />
+        <item itemvalue="JUnit.FormsAndExceptionsProcessTest" />
+        <item itemvalue="JUnit.AsyncServicesProcessTest" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +199,12 @@
       <workItem from="1711656017984" duration="9139000" />
       <workItem from="1711706931839" duration="685000" />
       <workItem from="1711949881911" duration="1205000" />
-      <workItem from="1711999208166" duration="5564000" />
+      <workItem from="1711999208166" duration="11323000" />
+      <workItem from="1712131779130" duration="5439000" />
+      <workItem from="1712185739314" duration="305000" />
+      <workItem from="1712225461297" duration="13924000" />
+      <workItem from="1712391670742" duration="29000" />
+      <workItem from="1712554654948" duration="6131000" />
     </task>
     <task id="LOCAL-00001" summary="Init. Fails on buildup - problem with camunda.cfg.xml">
       <option name="closed" value="true" />
@@ -184,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711662319736</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed my dependencies' problem. Tests are now working.">
+      <option name="closed" value="true" />
+      <created>1712013127033</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712013127033</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,23 +240,33 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Init. Fails on buildup - problem with camunda.cfg.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init. Fails on buildup - problem with camunda.cfg.xml" />
+    <MESSAGE value="Fixed my dependencies' problem. Tests are now working." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed my dependencies' problem. Tests are now working." />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/ProcessUnitTest.java</url>
-          <line>53</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/ProcessExampleUnitTest.java</url>
+          <line>51</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/SimpleProcessTest.java</url>
-          <line>36</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ru/rickheadle/welldungeons/WithDmnProcessTest.java</url>
+          <line>68</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="((ScenarioImpl)scenario).runners" custom="org.camunda.bpm.scenario.impl.ScenarioImpl" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

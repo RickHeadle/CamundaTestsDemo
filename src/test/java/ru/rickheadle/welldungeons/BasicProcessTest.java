@@ -11,11 +11,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(ProcessEngineCoverageExtension.class)
-@Deployment(resources = "process.bpmn")
-public class SimpleProcessTest {
+@Deployment(resources = "bpmn/process1_basic.bpmn")
+public class BasicProcessTest {
 
   static {
-    DelegateExpressions.autoMock("process.bpmn");
+    DelegateExpressions.autoMock("bpmn/process1_basic.bpmn");
   }
 
   public ProcessEngine processEngine;
@@ -23,15 +23,10 @@ public class SimpleProcessTest {
   @Test
   public void processStart_thenCompletedSuccessfully() {
     RuntimeService runtimeService = processEngine.getRuntimeService();
-    ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("CamundaTestsDemo");
+    ProcessInstance processInstance = runtimeService
+        .startProcessInstanceByKey("CamundaTestsDemo");
 
     BpmnAwareTests.assertThat(processInstance).isStarted();
     BpmnAwareTests.assertThat(processInstance).isEnded();
-
-/*    TaskService taskService = processEngine.getTaskService();
-    Task task = taskService.createTaskQuery().singleResult();
-    taskService.complete(task.getId());*/
-
-//    BpmnAwareTests.assertThat(processInstance).hasPassed("");
   }
 }

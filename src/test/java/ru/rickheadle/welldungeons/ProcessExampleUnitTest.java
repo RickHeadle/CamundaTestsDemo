@@ -18,15 +18,15 @@ import org.junit.jupiter.api.extension.ExtendWith;
  * Test case starting an in-memory database-backed Process Engine.
  */
 @ExtendWith(ProcessEngineCoverageExtension.class)
-@Deployment(resources = "process.bpmn")
-public class ProcessUnitTest {
+@Deployment(resources = "bpmn/process1_basic.bpmn")
+public class ProcessExampleUnitTest {
 
   private static final String PROCESS_DEFINITION_KEY = "CamundaTestsDemo";
   public static ProcessEngine processEngine;
 
   static {
     LogFactory.useSlf4jLogging(); // MyBatis
-    DelegateExpressions.autoMock("process.bpmn");
+    DelegateExpressions.autoMock("bpmn/process1_basic.bpmn");
   }
 
 
@@ -40,13 +40,11 @@ public class ProcessUnitTest {
    */
 
   @Test
-  @Deployment(resources = "process.bpmn")
   public void testParsingAndDeployment() {
     // nothing is done here, as we just want to check for exceptions during deployment
   }
 
   @Test
-  @Deployment(resources = "process.bpmn")
   public void testHappyPath() throws SQLException {
     ProcessInstance processInstance = processEngine.getRuntimeService()
         .startProcessInstanceByKey(PROCESS_DEFINITION_KEY);
